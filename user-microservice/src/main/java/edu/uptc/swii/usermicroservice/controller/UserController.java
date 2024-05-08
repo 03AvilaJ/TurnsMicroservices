@@ -1,6 +1,6 @@
 package edu.uptc.swii.usermicroservice.controller;
 
-import edu.uptc.swii.usermicroservice.entity.User;
+import edu.uptc.swii.usermicroservice.entity.Users;
 import edu.uptc.swii.usermicroservice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,19 +18,21 @@ public class UserController {
     UserService userService;
 
     @GetMapping("/allUsers")
-    @PreAuthorize("hasRole('Administrators_clientRole')")
-    public ResponseEntity<List<User>> getAllUsers(){
-        List<User> users = userService.getAllUsers();
-        if(users.isEmpty()){
+    public ResponseEntity<List<Users>> getAllUsers() {
+        List<Users> users = userService.getAllUsers();
+        if (users.isEmpty()) {
             return ResponseEntity.noContent().build();
+        }
+        for (Users u:users
+             ) {
+            //System.out.println(u.toString());
         }
         return ResponseEntity.ok(users);
     }
 
     @GetMapping("/userBy/{userId}")
-    @PreAuthorize("hasRole('Administrators_clientRole')")
-    public ResponseEntity<User> getUserById(@PathVariable("userId") Integer id){
-        User user = userService.getUserbyId(id);
+    public ResponseEntity<Users> getUserById(@PathVariable("userId") String id){
+        Users user = userService.getUserbyId(id);
         if(user == null){
             return ResponseEntity.notFound().build();
         }
@@ -38,15 +40,22 @@ public class UserController {
     }
 
     @PostMapping("/saveUser")
-    @PreAuthorize("hasRole('Administrators_clientRole') or hasRole('users_clientRole')" )
-    public  ResponseEntity<User> createUser(@RequestBody User user){
-        User userSave = userService.saveUser(user);
-        return ResponseEntity.ok(userSave);
+    public ResponseEntity<Users> addUser(@RequestBody Users user) {
+        Users newUser =  new Users();
+        System.out.println(user.getIdUser());
+        newUser.setIdUser(user.getIdUser());
+        newUser.setNameUser(user.getNameUser());
+        newUser.setLastNameUser(user.getLastNameUser());
+        newUser.setAddress(user.getAddress());
+        newUser.setEmail(user.getEmail());
+        newUser.setOrganizationUser(user.getOrganizationUser());
+        newUser.setIdUserType(user.getIdUserType());
+        Users savedUser = userService.saveUser(newUser);
+        return new ResponseEntity<>(savedUser, HttpStatus.CREATED);
     }
 
     @DeleteMapping("/deleteUser/{userId}")
-    @PreAuthorize("hasRole('Administrators_clientRole')")
-    public ResponseEntity<String> deleteUser(@PathVariable Integer userId) {
+    public ResponseEntity<String> deleteUser(@PathVariable String userId) {
         try {
             userService.deleteUserById(userId);
             return ResponseEntity.ok("Usuario eliminado correctamente");

@@ -1,6 +1,6 @@
 package edu.uptc.swii.usermicroservice.service;
 
-import edu.uptc.swii.usermicroservice.entity.User;
+import edu.uptc.swii.usermicroservice.entity.Users;
 import edu.uptc.swii.usermicroservice.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,20 +13,20 @@ public class UserService {
     @Autowired
     UserRepository userRepository;
 
-    public List<User> getAllUsers(){
+    public List<Users> getAllUsers(){
         return userRepository.findAll();
     }
 
-    public User getUserbyId(Integer id){
+    public Users getUserbyId(String id){
         return userRepository.findById(id).orElse(null);
     }
 
-    public User saveUser(User user){
-        User userNew= userRepository.save(user);
+    public Users saveUser(Users user){
+        Users userNew= userRepository.save(user);
         return userNew;
     }
 
-    public void deleteUserById(Integer userId) {
+    public void deleteUserById(String userId) {
         userRepository.deleteById(userId);
     }
 
