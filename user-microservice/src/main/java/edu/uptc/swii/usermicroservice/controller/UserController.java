@@ -18,6 +18,7 @@ public class UserController {
     UserService userService;
 
     @GetMapping("/allUsers")
+    //@PreAuthorize("hasRole('Administrators_clientRole')")
     public ResponseEntity<List<Users>> getAllUsers() {
         List<Users> users = userService.getAllUsers();
         if (users.isEmpty()) {
@@ -31,6 +32,7 @@ public class UserController {
     }
 
     @GetMapping("/userBy/{userId}")
+    //@PreAuthorize("hasRole('Administrators_clientRole')")
     public ResponseEntity<Users> getUserById(@PathVariable("userId") String id){
         Users user = userService.getUserbyId(id);
         if(user == null){
@@ -40,6 +42,7 @@ public class UserController {
     }
 
     @PostMapping("/saveUser")
+    //@PreAuthorize("hasRole('Administrators_clientRole') or hasRole('users_clientRole')" )
     public ResponseEntity<Users> addUser(@RequestBody Users user) {
         Users newUser =  new Users();
         System.out.println(user.getIdUser());
@@ -55,6 +58,7 @@ public class UserController {
     }
 
     @DeleteMapping("/deleteUser/{userId}")
+    //@PreAuthorize("hasRole('Administrators_clientRole')")
     public ResponseEntity<String> deleteUser(@PathVariable String userId) {
         try {
             userService.deleteUserById(userId);

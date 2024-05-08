@@ -11,8 +11,18 @@ spring:
 
   security:
     oauth2:
-      resourceserver:
+      resource-server:
         jwt:
           issuer-uri:http: //localhost:9090/realms/TurnsManagementApp
+          set-uri: http://localhost:9090/realms/TurnsManagementApp/protocol/openid-connect/certs
+
+          auth:
+            converter:
+              principal-attribute: preferred_username
+              resource-id: user-client-microservice
+logging:
+  level:
+    org:
+      keycloak: DEBUG
 
 

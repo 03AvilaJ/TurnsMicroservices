@@ -1,4 +1,4 @@
-2024-05-07 22:15:26.400048-05:00 database: flush
+2024-05-08 08:05:09.934358-05:00 database: flush
 org.h2.message.DbException: Error General : "org.h2.mvstore.MVStoreException: Could not open file C:/Users/usuario/Documents/s2/proyecto/TurnsMicroservices/keycloak-24.0.3/data/h2/keycloakdb.mv.db [2.2.224/1]"
 General error: "org.h2.mvstore.MVStoreException: Could not open file C:/Users/usuario/Documents/s2/proyecto/TurnsMicroservices/keycloak-24.0.3/data/h2/keycloakdb.mv.db [2.2.224/1]" [50000-224]
 	at org.h2.message.DbException.get(DbException.java:212)
@@ -41,7 +41,7 @@ Caused by: java.nio.channels.ClosedByInterruptException
 	at java.base/sun.nio.ch.FileChannelImpl.size(FileChannelImpl.java:395)
 	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:120)
 	... 19 more
-2024-05-07 22:15:26.402851-05:00 database: opening C:/Users/usuario/Documents/s2/proyecto/TurnsMicroservices/keycloak-24.0.3/data/h2/keycloakdb
+2024-05-08 08:05:09.939385-05:00 database: opening C:/Users/usuario/Documents/s2/proyecto/TurnsMicroservices/keycloak-24.0.3/data/h2/keycloakdb
 org.h2.message.DbException: IO Exception: "C:/Users/usuario/Documents/s2/proyecto/TurnsMicroservices/keycloak-24.0.3/data/h2/keycloakdb.mv.db"
 IO Exception: "C:/Users/usuario/Documents/s2/proyecto/TurnsMicroservices/keycloak-24.0.3/data/h2/keycloakdb.mv.db" [90028-224]
 	at org.h2.message.DbException.get(DbException.java:212)
@@ -81,7 +81,7 @@ Caused by: java.nio.channels.ClosedByInterruptException
 	at java.base/sun.nio.ch.FileChannelImpl.size(FileChannelImpl.java:395)
 	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:120)
 	... 19 more
-2024-05-07 22:15:26.413223-05:00 database: opening C:/Users/usuario/Documents/s2/proyecto/TurnsMicroservices/keycloak-24.0.3/data/h2/keycloakdb
+2024-05-08 08:05:09.952626-05:00 database: opening C:/Users/usuario/Documents/s2/proyecto/TurnsMicroservices/keycloak-24.0.3/data/h2/keycloakdb
 org.h2.message.DbException: Error abriendo la base de datos: "Sleep interrupted"
 Error opening database: "Sleep interrupted" [8000-224]
 	at org.h2.message.DbException.get(DbException.java:212)
