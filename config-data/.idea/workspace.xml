@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="891a16f2-1cf1-49bb-a9d4-5386a95b049e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-sercive.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../canfig-data/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/user.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gateway-services/src/main/java/edu/uptc/swii/gatewayservices/GatewayServicesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway-services/src/main/java/edu/uptc/swii/gatewayservices/GatewayServicesApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gateway-services/src/main/resources/bootstrap.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway-services/src/main/resources/bootstrap.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../user-microservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user-microservice/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,22 +24,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/usuario/Documents/s2/proyecto/TurnsMicroservices/config-data&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/usuario/Documents/s2/proyecto/TurnsMicroservices/gateway-services",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\usuario\Documents\s2\proyecto\TurnsMicroservices\config-data" />
@@ -64,6 +58,7 @@
       <workItem from="1715088562412" duration="2088000" />
       <workItem from="1715109312582" duration="811000" />
       <workItem from="1715117343495" duration="898000" />
+      <workItem from="1715138244750" duration="941000" />
     </task>
     <servers />
   </component>

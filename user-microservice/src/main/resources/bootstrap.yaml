@@ -9,4 +9,10 @@ spring:
     username: ticket
     password: qwerty98%
 
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri:http: //localhost:9090/realms/TurnsManagementApp
+
 
